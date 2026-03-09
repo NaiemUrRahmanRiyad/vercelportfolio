@@ -554,7 +554,8 @@ body {
 }
 
 .category-icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 /* Technologies Section */
@@ -637,6 +638,8 @@ body {
     border: 1px solid var(--border-color);
     transition: var(--transition);
     cursor: default;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .skill-tag:hover {
@@ -1095,6 +1098,18 @@ body {
 .back-to-top:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .back-to-top svg {

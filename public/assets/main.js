@@ -128,16 +128,16 @@ function initTypewriter() {
 
 // Hero Name Animation
 function initHeroNameAnimation() {
-    const name = "Naiem Ur Rahman Riyad";
+    const name = "";
     const container = document.getElementById('heroName');
     
-    name.split('').forEach((char, index) => {
-        const span = document.createElement('span');
-        span.textContent = char === ' ' ? '\u00A0' : char;
-        span.className = 'char';
-        span.style.animationDelay = `${1.6 + (index * 0.05)}s`;
-        container.appendChild(span);
-    });
+    // name.split('').forEach((char, index) => {
+    //     const span = document.createElement('span');
+    //     span.textContent = char === ' ' ? '\u00A0' : char;
+    //     span.className = 'char';
+    //     span.style.animationDelay = `${1.6 + (index * 0.05)}s`;
+    //     container.appendChild(span);
+    // });
 }
 
 // Scroll Animations
@@ -167,12 +167,23 @@ function initScrollAnimations() {
                         }, i * 60);
                     });
                 }
+            } else {
+                entry.target.classList.remove('visible');
+                
+                // Reset skill tags
+                if (entry.target.classList.contains('skill-category')) {
+                    const tags = entry.target.querySelectorAll('.skill-tag');
+                    tags.forEach(tag => {
+                        tag.style.opacity = '0';
+                        tag.style.transform = 'translateY(20px)';
+                    });
+                }
             }
         });
     }, observerOptions);
 
     // Observe elements
-    document.querySelectorAll('.timeline-item, .stat-item, .skill-category, .project-card, .tech-item').forEach(el => {
+    document.querySelectorAll('.timeline-item, .stat-item, .skill-category, .project-card, .tech-item, .fade-in').forEach(el => {
         observer.observe(el);
     });
 
