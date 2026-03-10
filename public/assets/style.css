@@ -760,6 +760,27 @@ body {
     position: relative;
     transform-style: preserve-3d;
     perspective: 1000px;
+    cursor: pointer;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, rgba(0, 212, 255, 0.05) 50%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.8s ease-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.project-card:hover::before {
+    width: 400px;
+    height: 400px;
 }
 
 .featured-badge {
