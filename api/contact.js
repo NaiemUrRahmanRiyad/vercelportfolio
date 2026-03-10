@@ -1,10 +1,7 @@
-import nodemailer from 'nodemailer';
-import express from 'express';
-
-const router = express.Router();
+const nodemailer = require('nodemailer');
 
 // Email transporter
-const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransporter({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
@@ -12,10 +9,30 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Submit contact form (Public)
-router.post('/', async (req, res) => {
+export default async function handler(req, res) {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
   try {
     const { name, email, message } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
 
     // Send email to yourself
     const mailOptions = {
@@ -36,11 +53,9 @@ router.post('/', async (req, res) => {
     await transporter.sendMail(mailOptions);
 
     console.log('📧 Email sent successfully to:', process.env.EMAIL_TO);
-    res.status(201).json({ message: 'Message sent successfully' });
+    res.status(200).json({ message: 'Message sent successfully' });
   } catch (error) {
     console.error('Contact error:', error);
     res.status(500).json({ message: 'Error sending message' });
   }
-});
-
-export default router;
+}

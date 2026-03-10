@@ -1,9 +1,13 @@
-require('dotenv').config({ path: './server/.env' });
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
-const path = require('path');
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -36,7 +40,8 @@ app.get('/', (req, res) => {
 });
 
 // Routes
-app.use('/api/contact', contactLimiter, require('./routes/contact'));
+const contactRouter = (await import('./routes/contact.js')).default;
+app.use('/api/contact', contactLimiter, contactRouter);
 
 // Test route
 app.get('/api/test', (req, res) => {
