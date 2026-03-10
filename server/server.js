@@ -1,9 +1,7 @@
-require('dotenv').config();
+require('dotenv').config({ path: './server/.env' });
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const helmet = require('helmet');
-const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
 
@@ -28,10 +26,8 @@ const contactLimiter = rateLimit({
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
 // Static Files
-app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 app.use(express.static(path.join(__dirname, '../public')));
 
 // ✅ ROOT ROUTE FIX
@@ -39,37 +35,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// Database Connection with Debug
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio');
-    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
-    
-    // Debug: Check collections
-    const collections = await conn.connection.db.listCollections().toArray();
-    console.log('📁 Collections:', collections.map(c => c.name));
-    
-  } catch (err) {
-    console.error('❌ MongoDB Error:', err.message);
-    console.log('⚠️  Server continuing without database...');
-  }
-};
-
-connectDB();
-
 // Routes
-app.use('/api/auth', require('./routes/auth'));
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/contact', contactLimiter, require('./routes/contact'));
 
 // Test route
 app.get('/api/test', (req, res) => {
-  res.json({ message: 'API is working', dbState: mongoose.connection.readyState });
-});
-
-// Serve Admin Panel
-app.get('/admin/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/admin', req.params[0] || 'login.html'));
+  res.json({ message: 'API is working' });
 });
 
 // Error Handling
@@ -82,5 +54,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📁 Portfolio: http://localhost:${PORT}`);
-  console.log(`🔐 Admin: http://localhost:${PORT}/admin/login.html`);
 });

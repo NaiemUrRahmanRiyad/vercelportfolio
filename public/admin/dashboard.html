@@ -883,29 +883,40 @@
         
         // Check auth on load
         async function checkAuth() {
+            console.log('Checking authentication...');
             try {
                 const res = await fetch('/api/auth/check', { credentials: 'include' });
+                console.log('Auth check response:', res.status);
                 if (!res.ok) throw new Error('Not authenticated');
+                console.log('Authentication successful, initializing dashboard');
                 initDashboard();
             } catch (err) {
+                console.error('Authentication failed:', err);
                 window.location.href = '/admin/login.html';
             }
         }
         
         // Initialize
         async function initDashboard() {
+            console.log('Initializing dashboard...');
             await Promise.all([loadProjects(), loadMessages()]);
             updateStats();
             renderRecentMessages();
+            console.log('Dashboard initialized');
         }
         
         // Load Projects
         async function loadProjects() {
+            console.log('Loading projects...');
             try {
                 const res = await fetch('/api/projects', { credentials: 'include' });
+                console.log('Projects API response status:', res.status);
                 projects = await res.json();
+                console.log('Projects loaded:', projects);
+                console.log('Number of projects:', projects.length);
                 renderProjects();
             } catch (err) {
+                console.error('Error loading projects:', err);
                 showToast('Failed to load projects', 'error');
             }
         }
@@ -924,15 +935,21 @@
         
         // Render Projects Table
         function renderProjects() {
+            console.log('Rendering projects table...');
+            console.log('Projects array:', projects);
             const tbody = document.getElementById('projectsTable');
             const empty = document.getElementById('projectsEmpty');
+            console.log('Table body element:', tbody);
+            console.log('Empty state element:', empty);
             
             if (projects.length === 0) {
+                console.log('No projects found, showing empty state');
                 tbody.innerHTML = '';
                 empty.classList.remove('hidden');
                 return;
             }
             
+            console.log('Projects found, rendering table');
             empty.classList.add('hidden');
             tbody.innerHTML = projects.map(p => `
                 <tr>
@@ -954,6 +971,7 @@
                     </td>
                 </tr>
             `).join('');
+            console.log('Projects table rendered successfully');
         }
         
         // Render Messages Table
