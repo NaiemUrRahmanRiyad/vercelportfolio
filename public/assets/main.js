@@ -319,31 +319,61 @@ function renderProjects(projects) {
 // Contact Form
 function initContactForm() {
     const form = document.getElementById('contactForm');
+    if (!form) return;
     
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        const data = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        // Client-side validation
+        if (!name || !email || !message) {
+            showToast('❌ Please fill in all fields', 'error');
+            return;
+        }
+        
+        // Email format validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showToast('❌ Please enter a valid email address', 'error');
+            return;
+        }
+        
+        const data = { name, email, message };
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
         
         try {
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            
             const response = await fetch('/.netlify/functions/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
             
+            const responseData = await response.json();
+            
             if (response.ok) {
-                showToast('Message sent successfully! ✓', 'success');
+                showToast('✓ Message sent successfully! Check your email for confirmation.', 'success');
                 form.reset();
             } else {
-                throw new Error('Failed to send');
+                // Show specific error message from server
+                const errorMsg = responseData.message || responseData.error || 'Failed to send message';
+                showToast(`❌ ${errorMsg}`, 'error');
+                console.error('Server error:', responseData);
             }
         } catch (error) {
-            showToast('Failed to send message. Please try again.', 'error');
+            console.error('Contact form error:', error);
+            showToast('❌ Network error. Please check your internet connection and try again.', 'error');
+        } finally {
+            // Re-enable button and restore original text
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
         }
     });
 }
