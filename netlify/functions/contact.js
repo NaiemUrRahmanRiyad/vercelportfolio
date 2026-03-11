@@ -106,7 +106,7 @@ exports.handler = async (event, context) => {
       statusCode: 201,
       headers: corsHeaders,
       body: JSON.stringify({
-        message: 'Message sent successfully! ✓',
+        message: 'Message sent successfully!',
         messageId: info.messageId,
       }),
     };
