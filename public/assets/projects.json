@@ -6,8 +6,8 @@
   "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling"],
   "shortDescription": "An interactive Power BI dashboard that analyzes Uber trip data to uncover booking trends, revenue insights, and customer behavior patterns. The project leverages advanced DAX, time-based analysis, and data visualization techniques to support data-driven decision-making.",
     "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/8dd5f97768bd2f7af43c9c0b48d5669fb8dcbf0e/Power%20Bi%20Projects/Trip%20Analysis",
-    "liveDemoLink": "<iframe title=\"Jaboo Trip Analysis\" width=\"600\" height=\"373.5\" src=\"https://app.fabric.microsoft.com/view?r=eyJrIjoiNTgyZmQzODQtMmM3ZS00OTBhLWExYmUtYzFhMGFlMTJiZWE3IiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D\" frameborder=\"0\" allowFullScreen=\"true\"></iframe>",
-    "image": "https://ibb.co.com/hRbmgbjZ",
+    "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTgyZmQzODQtMmM3ZS00OTBhLWExYmUtYzFhMGFlMTJiZWE3IiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
+    "image": "https://i.ibb.co.com/PXrBM3V/Screenshot-2026-03-31-105715.png",
     "featured": true
   },
   {
