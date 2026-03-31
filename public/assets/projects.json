@@ -56,13 +56,13 @@
   },
   {
     "id": 6,
-    "title": "Task Management System",
-    "category": "Full Stack",
-    "technologies": ["Vue.js", "Laravel", "MySQL", "Redis"],
+    "title": "Food Delivery Analysis Excel Dashboard",
+    "category": "Business Intelligence",
+    "technologies": ["Excel","Pivot Tables","Data Cleaning","Data Visualization"],
     "shortDescription": "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
-    "githubLink": "https://github.com/username/task-manager",
-    "liveDemoLink": "https://task-manager-demo.vercel.app",
-    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+    "githubLink": "https://github.com/NaiemUrRahmanRiyad/Excel-Projects/tree/d27e822e67f75f4be11a1c8d362cdad5245fd3ca/Food%20Delivery%20Analysis",
+    "liveDemoLink": "https://i.ibb.co.com/67C25v09/f1.png",
+    "image": "https://i.ibb.co.com/67C25v09/f1.png",
     "featured": false
   }
 ]
