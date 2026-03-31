@@ -1,24 +1,24 @@
 [
   {
     "id": 1,
-    "title": "Trip Analysis Dashboard",
-  "category": "Data Analytics / Business Intelligence",
-  "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling"],
-  "shortDescription": "An interactive Power BI dashboard that analyzes Uber trip data to uncover booking trends, revenue insights, and customer behavior patterns. The project leverages advanced DAX, time-based analysis, and data visualization techniques to support data-driven decision-making.",
-    "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/8dd5f97768bd2f7af43c9c0b48d5669fb8dcbf0e/Power%20Bi%20Projects/Trip%20Analysis",
-    "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTgyZmQzODQtMmM3ZS00OTBhLWExYmUtYzFhMGFlMTJiZWE3IiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
-    "image": "https://i.ibb.co.com/PXrBM3V/Screenshot-2026-03-31-105715.png",
+     "title": "Telecom Customer Churn Analysis",
+     "category": "Data Analytics / Business Intelligence",
+     "technologies": ["SQL Server", "Power BI", "Python", "Random Forest", "Google Colab", "Excel"],
+     "shortDescription": "A complete end-to-end churn analysis project covering ETL in SQL Server, interactive Power BI dashboards, and a Random Forest ML model to predict future customer churners for a telecom company.",
+     "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/5c700b6992cf9981da5f8362dd4e29e8b03fb5e3/Telecom%20Churn%20Analysis",
+    "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiZGMxMDU1YmItMDE3MS00NjAwLWIzNDEtZjQ5NTY3MzJmNjhlIiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
+    "image": "https://i.ibb.co.com/cKH30rBZ/c1.png",
     "featured": true
   },
   {
     "id": 2,
-    "title": "Real-time Chat Application",
-    "category": "Full Stack",
-    "technologies": ["React", "Socket.io", "Node.js", "Express", "MongoDB"],
-    "shortDescription": "A modern real-time messaging application with features like group chats, file sharing, and end-to-end encryption.",
-    "githubLink": "https://github.com/username/chat-app",
-    "liveDemoLink": "https://chat-app-demo.vercel.app",
-    "image": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop",
+    "title": "Trip Analysis Dashboard",
+    "category": "Data Analytics / Business Intelligence",
+    "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling"],
+    "shortDescription": "An interactive Power BI dashboard that analyzes Uber trip data to uncover booking trends, revenue insights, and customer behavior patterns. The project leverages advanced DAX, time-based analysis, and data visualization techniques to support data-driven decision-making.",
+    "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/5c700b6992cf9981da5f8362dd4e29e8b03fb5e3/Telecom%20Churn%20Analysis",
+    "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTgyZmQzODQtMmM3ZS00OTBhLWExYmUtYzFhMGFlMTJiZWE3IiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
+    "image": "https://i.ibb.co.com/PXrBM3V/Screenshot-2026-03-31-105715.png",
     "featured": true
   },
   {
