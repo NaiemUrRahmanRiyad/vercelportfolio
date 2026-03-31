@@ -14,7 +14,7 @@
     "id": 2,
     "title": "Trip Analysis Dashboard",
     "category": "Data Analytics / Business Intelligence",
-    "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling"],
+    "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling","Data Visualization"],
     "shortDescription": "An interactive Power BI dashboard that analyzes Uber trip data to uncover booking trends, revenue insights, and customer behavior patterns. The project leverages advanced DAX, time-based analysis, and data visualization techniques to support data-driven decision-making.",
     "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/5c700b6992cf9981da5f8362dd4e29e8b03fb5e3/Telecom%20Churn%20Analysis",
     "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTgyZmQzODQtMmM3ZS00OTBhLWExYmUtYzFhMGFlMTJiZWE3IiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
@@ -23,14 +23,14 @@
   },
   {
     "id": 3,
-    "title": "E-commerce Dashboard",
-    "category": "Frontend",
-    "technologies": ["React", "TypeScript", "Chart.js", "Tailwind CSS"],
-    "shortDescription": "An interactive dashboard for e-commerce businesses featuring sales analytics, inventory management, and customer insights.",
-    "githubLink": "https://github.com/username/ecommerce-dashboard",
-    "liveDemoLink": "https://ecommerce-dashboard-demo.vercel.app",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    "featured": false
+    "title": "Hospital Monitoring Dashboard",
+    "category": "Data Analytics / Business Intelligence",
+    "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling","Data Visualization","Healthcare Analytics"],
+    "shortDescription": "An interactive Power BI dashboard monitoring hospital operations across 10 hospitals, featuring treatment cost analysis, admission trends, patient demographics, and $1.4B in billing insights.",
+    "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/235d1ec05419a1b7f870ada924ca552216b8a338/Hospital%20Monitoring%20Dashboard",
+    "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiNzFmNzgyZDEtMGM3Ny00MzY5LWEzOTctMzM0YWUyMmJjNjMxIiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
+    "image": "https://i.ibb.co.com/1YGBvC9C/h1.png",
+    "featured": true
   },
   {
     "id": 4,
