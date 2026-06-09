@@ -10,8 +10,19 @@
     "image": "https://i.ibb.co.com/cKH30rBZ/c1.png",
     "featured": true
   },
-  {
+   {
     "id": 2,
+    "title": "FMCG Analysis Dashboard",
+    "category": "Data Analytics / Business Intelligence",
+    "technologies": ["SQL","Power BI", "DAX", "Power Query","Data Visualization"],
+    "shortDescription": "A end-to-end Power BI dashboard analyzing Bangladesh's FMCG market — tracking 28.55M BDT in revenue, 33.68% gross profit margin, and 95.35% YoY growth across 6 product categories, 8 divisions, and 4 sales channels. Built with SQL for data analysis and DAX for dynamic KPI measures.",
+    "githubLink": "https://github.com/NaiemUrRahmanRiyad/Power-Bi-Projects/tree/f176dd4b29d1314772754650455fd244ea3b0d00/FMCG%20Sales%20Analysis",
+    "liveDemoLink": "https://app.fabric.microsoft.com/view?r=eyJrIjoiZGMxMDU1YmItMDE3MS00NjAwLWIzNDEtZjQ5NTY3MzJmNjhlIiwidCI6ImM4ODk5ZDQ4LTIyN2MtNDRhZS05YzIxLWQwZDkyYmU5ODRjYyIsImMiOjEwfQ%3D%3D",
+    "image": "https://ibb.co.com/5zwRggq",
+    "featured": true
+  },
+  {
+    "id": 3,
     "title": "Trip Analysis Dashboard",
     "category": "Data Analytics / Business Intelligence",
     "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling","Data Visualization"],
@@ -22,7 +33,7 @@
     "featured": true
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Hospital Monitoring Dashboard",
     "category": "Data Analytics / Business Intelligence",
     "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling","Data Visualization","Healthcare Analytics"],
@@ -33,7 +44,7 @@
     "featured": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Bank Loan Report Dashboard",
     "category": "Business Intelligence",
     "technologies": ["SQL","Power BI", "DAX", "Power Query", "Data Modeling", "Data Visualization"],
@@ -44,7 +55,7 @@
     "featured": false
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Superstore Sales Monitoring Dashboard",
     "category": "Business Intelligence",
     "technologies": ["Power BI", "DAX", "Power Query", "Data Modeling", "Data Visualization"],
@@ -55,7 +66,7 @@
     "featured": false
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Food Delivery Analysis Excel Dashboard",
     "category": "Business Intelligence",
     "technologies": ["Excel","Pivot Tables","Data Cleaning","Data Visualization"],
