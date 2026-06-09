@@ -12,7 +12,7 @@
   },
    {
     "id": 2,
-    "title": "FMCG Analysis Dashboard",
+    "title": "FMCG Sales Analysis Dashboard",
     "category": "Data Analytics / Business Intelligence",
     "technologies": ["SQL","Power BI", "DAX", "Power Query","Data Visualization"],
     "shortDescription": "A end-to-end Power BI dashboard analyzing Bangladesh's FMCG market — tracking 28.55M BDT in revenue, 33.68% gross profit margin, and 95.35% YoY growth across 6 product categories, 8 divisions, and 4 sales channels. Built with SQL for data analysis and DAX for dynamic KPI measures.",
